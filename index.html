@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            html {
+                background: url('https://images.unsplash.com/photo-1498673394965-85cb14905c89?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat fixed center / cover;
+                position: relative;
+
+            }
+            body {
+                background: inherit;
+                display: flex;
+                min-height: 100vh;
+            }
+            .block * {
+                position: relative;
+            }
+            .block {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                width: 1000px;
+                height: 400px;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+                margin: auto;
+                border-radius: 15px;
+                text-shadow: 0 1px 0 #333;
+                border: 10px solid rgba(0, 0, 0, 0.116);
+                background: inherit;
+            }
+            .block:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: inherit;
+                filter: blur(5px);
+
+            }
+            h1 {
+                color: aliceblue;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .title {
+                color: aliceblue;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px;
+            }
+            .subtitle {
+                color: aliceblue;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px;
+            }
+            .mytg {
+                color: rgb(106, 186, 255);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 30px;
+            }
+            .somebutton {
+                color: rgb(255, 47, 47);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+        </style>
+        <title>
+            About me
+        </title>
+        <body>
+            <div class="block">
+            <h1>
+                Hi there!
+            </h1>
+            <hr size="1" color="white">
+            <span class="title">I'm Dmitriy and someone may know me as Cr1stalik. I'm a beginner coder in Python & Java.
+            </span>
+            <span class="subtitle">
+                I'm glad to see you here. Look around for a while.
+            </span>
+            <h3 class="mytg">
+                Telegram: <a href="https://t.me/crystalsh1ne"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" width="25" height="25"></a>
+                <div class="somebutton">
+                    ???: <a href="https://days.to/until/christmas"><img src="https://cdn-icons-png.flaticon.com/512/1358/1358904.png" width="25" height="25"></a>
+                </div>
+            </h3>
+            </div>
+        </body>
+    </head>
+</html>
