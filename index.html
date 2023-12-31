@@ -1,150 +1,89 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <style>
-            html {
-                background: url('https://images.unsplash.com/photo-1601922046210-41e129a3e64a?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat fixed center / cover;
-                position: relative;
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var tl = gsap.timeline({ repeat: -1 });
+            tl.to("h1", 30, { backgroundPosition: "-960px 0" });
+        });
+    </script>
 
-            }
-            body {
-                background: inherit;
-                display: flex;
-                min-height: 100vh;
-            }
-            .block * {
-                position: relative;
-            }
-            .block {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                width: 1000px;
-                height: 400px;
-                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0);
-                margin: auto;
-                border-radius: 15px;
-                text-shadow: 0 1px 0 #333;
-                border: 10px solid rgba(0, 0, 0, 0);
-                background-color:rgba(0, 0, 0, 0.3);
-                transform: translateY(-500%);
-                animation: ani 1s forwards ease-out 500ms;
-            }
+    <style>
+        body {
+            background-color: #1d1d1d;
+            margin: 0;
+            padding: 0;
+        }
+        .element {
+            font-family: monospace;
+            font-size: 25px;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+        }
 
-            @keyframes ani {
-                0% {
-                    transform: translateY(-150%);
-                }
-                100% {
-                    transform: translateY(0);
-                }
-            }
-            .block:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background: inherit;
-                filter: blur(5px);
-                
+        .element2 {
+            font-family: monospace;
+            font-size: 20px;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+        }
+        .element3 {
+            font-family: monospace;
+            font-size: 30px;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+        }
+        .wrapper {
+            display: flex;
+            height: 30vh;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            max-width: 75%;
+            font-size: 140px;
+            font-family: "Montserrat", sans-serif;
+            color: #540032;
+        }
 
-            }
-            h1 {
-                color: aliceblue;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            h2 {
-                color: aliceblue;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            .title {
-                color: aliceblue;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 20px;
-            }
-            .subtitle {
-                color: aliceblue;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 20px;
-            
-            }
-            .desc {
-                color: aliceblue;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 20px;
-            }
-            .mytg {
-                color: rgb(106, 186, 255);
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 25px;
-            }
-            .somebutton {
-                color: rgb(255, 47, 47);
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            button {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                position: relative;
-                overflow: hidden;
-                background-color: #7bb9ff;
-                color: rgb(255, 255, 255);
-                padding: 15px 100px;
-                font-size: 20px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-            .ton {
-                color: rgb(69, 255, 109);
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            a {
-                color: aliceblue;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            .aboutmelink {
-                color: white;
-                text-decoration: none;
-                font-size: 25px;
-            }
-            
-            
-        </style>
-        <title>
-            About me
-        </title>
-        <body>
-            <div id="snow"></div>
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-            <script src="snow/snow.js"></script>
-            <div class="block">
-            <h1>
-                Hello! 👋
-            </h1>
-            <h2>
-                Site under construction! Stand by for an update
-            </h2>
-            <hr size="1" color="white">
-            <span class="title">I'm Dmitry and someone may know me as Cr1stalik.
-            </span>
-            <span class="desc">
-                I'm a beginner coder in Python & Java.
-            </span>
-            <span class="subtitle">
-                I'm glad to see you here. Look around for a while.
-            </span>
-            <h3 class="mytg">
-                Telegram: <a href="https://t.me/crystalsh1ne"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" width="25" height="25"></a>
-                <div class="somebutton">
-                    ???: <a href="https://days.to/until/christmas"><img src="https://cdn-icons-png.flaticon.com/512/1358/1358904.png" width="25" height="25"></a>
-                </div>
-            </h3>
-            </div>
-        </body>
-    </head>
+
+        .title {
+            background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg);
+            background-attachment: fixed;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Про кристалика</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1 class="title" id="megaelem"></h1>
+</div>
+
+<span class="element2" id="element2"></span>
+<script>
+    var typed2 = new Typed('#megaelem', {
+        strings: ["Hello","Salut","Hola","Hallo","Ciao","Привет","你好","こんにちは","안녕하세요","مرحبا","नमस्ते","Olá","Merhaba","Χαίρετε","שלום","Hej","Cześć","Hallo","Hei","Chào bạn"],
+        typeSpeed: 60,
+        backDelay: 1000,
+        backSpeed: 40,
+        loop: true
+    });
+</script>
+<span class="element2" id="element3">Меня зовут Дима, мне 14 годиков, я из 🇺🇦.</span>
+<span class="element2" id="element4">Постепенно учу такие ЯП как Python и Java.</span>
+<h3></h3>
+<span class="element3" id="element5">github: https://github.com/crystalsh1ne</span>
+<span class="element3" id="element6">steam: dmitrydolznikov</span>
+</body>
 </html>
