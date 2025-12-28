@@ -4,14 +4,372 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRSTLZS's home</title>
+    <style>
+        @font-face {
+            font-family: 'sanBold';
+            src: url(/SFProText-Bold.ttf);
+        }
+        @font-face {
+            font-family: 'sanMedium';
+            src: url(/SFProText-Medium.ttf);
+        }
+        @font-face {
+            font-family: 'sanLight';
+            src: url(/SFProText-Light.ttf);
+        }
+        html {
+            margin: 0;
+            height: 100%;
+            background: #8a8a8a;
+            background: radial-gradient(circle, rgba(138, 138, 138, 1) 0%, rgba(94, 94, 94, 1) 51%, rgba(41, 41, 41, 1) 100%);  
+        }
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header {
+            font-family: 'sanBold', sans-serif;
+            background-color: rgb(250, 250,250);
+            height: 25px;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            top: 0;
+            left: 0;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+            flex-direction: row;
+            align-items: center;
+            z-index: 9999;
+        }
+        .applelogo {
+            height: 18px;
+            margin-left: 5px;
+            margin-top: 0px;
+        }
+        .headertext {
+            display: flex;
+            margin-left: 15px;
+            flex-direction: row;
+        }
+        .nameofwindowname {
+            font-family: 'sanBold';
+        }
+        .instruments {
+            font-family: 'sanLight';
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .mainwindow {
+            background-color: rgb(255, 255, 255);
+            height: 500px;
+            width: 1000px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            z-index: 2;
+        }
+        .inwindowpanel {
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background: #E5E5E5;
+            background: linear-gradient(0deg, rgba(229, 229, 229, 1) 0%, rgba(210, 210, 211, 1) 100%);
+            height: 25px;
+            width: 100%;
+            display: flex;
+        }
+        .divider {
+            background-color: rgb(207, 206, 207);
+            height: 1px;
+        }
+        .buttons {
+            display: flex;
+            height: 21px;
+            width: 10%;
+            margin-left: -8px;
+            margin-top: 2px;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .button1 {
+            background-color: rgb(255, 96, 92);
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            margin-left: -80%;
+            border-style: solid;
+            border-color: rgb(222, 83, 80);
+            border-width: 1px;
+            margin: 5px;
+        }
+        .button2 {
+            background-color: rgb(209, 209, 209);
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: rgb(170, 170, 170);
+            border-width: 1px;
+            margin: 5px;
+        }
+        .button3 {
+            background-color: rgb(209,209,209);
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: rgb(170,170,170);
+            border-width: 1px;
+            margin: 5px;
+
+        }
+        .title {
+            color: rgb(0, 0, 0);
+        }
+        
+        .maintext {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: lighter;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            flex-direction: column;
+        }
+        
+        .subtitle {
+            font-size: 25px;
+        }
+        .options {
+            display:flex;
+            height: 35%;
+            width: 100%;
+            margin-top: 50px;
+            flex-direction: column;
+        }
+        .option1 {
+            display: flex;
+            height: 45px;
+            width: 100%;
+            margin-top: 10px;
+            flex-direction:row;
+            align-items: center;
+            cursor: pointer;
+        }
+        .option1:hover {
+            background-color: rgb(177, 218, 255);
+        }
+        .option1href {
+            outline: none;
+            text-decoration: none;
+            color: black;
+        }
+        .option2 {
+            display: flex;
+            height: 45px;
+            width: 100%;
+            margin-top: 0px;
+            flex-direction:row;
+            align-items: center;
+            cursor: pointer;
+        }
+        .option2:hover {
+            background-color: rgb(177, 218, 255);
+        }
+        .option3 {
+            display: flex;
+            height: 45px;
+            width: 100%;
+            margin-top: 0px;
+            flex-direction:row;
+            align-items: center;
+        }
+        .image1 {
+            margin-top: 8px;
+            margin-left: 25%;
+        }
+        .text1 {
+            margin-left: 5px;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight:bold;
+        }
+        .subtext1 {
+            margin-left: 5px;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+        }
+        .img2 {
+            margin-top: 8px;
+            height: 35px;
+            width: 35px;
+        }
+        .image2 {
+            margin-left: 25.4%;
+        }
+        .text2 {
+            margin-left: 13px;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight:bold;
+        }
+        .subtext2 {
+            margin-left: 13px;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+        }
+        .image3 {
+            margin-top: 8px;
+        }
+        .text3 {
+            margin-left: 5px;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight:bold;
+        }
+        .subtext3 {
+            margin-left: 5px;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+        }
+        .content {
+            background-color: aqua;
+            margin-top: 44px;
+            width: 180px;
+        }
+        .powerbox {
+            height: 100px;
+            width: 250px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 125px;
+            margin-left: -37px;
+            background-color: rgb(250, 250,250);
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            border-radius: 2px;
+            display: none;
+            
+        }
+        .powerbtn1 {
+            font-family: sanLight;
+            cursor: pointer;
+
+
+            margin-top: 5px;
+            height: 35%;
+            display: flex;
+            align-items: center;
+        }
+        .powerbtn2 {
+            font-family: sanLight;
+            cursor: pointer;
+            margin-top: 5px;
+            height: 35%;
+            display: flex;
+            align-items: center;
+        }
+        .powerimage1 {
+            height: 35px;
+            margin-top: 5px;
+        }
+        .powertext1 {
+            margin-left: 5px;
+        }
+        .powerimage2 {
+            height: 35px;
+            margin-top: 5px;
+        }
+        .powertext2 {
+            margin-left: 5px;
+        }
+        .powerbtn1:hover {
+            background-color: rgb(177, 218, 255);
+        }
+        .powerbtn2:hover {
+            background-color: rgb(177, 218, 255);
+        }
+    </style>
 </head>
 <body>
-    <h1>last upd: 27.12.2025</h1>
-    <h1>yeah I know my "home" doesnt have any CSS but I promise you as soon as I finish my project I will make design more pleasant</h1>
-    <h1>
-    </h1>
-    <h1>
-        
-    </h1>
+<header>
+    <img class="applelogo" id="applelogo1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Ba90L7yn3KFFRqXISDAB3-EAdvrw4zhpjA&s">
+    <script>
+        document.getElementById('applelogo1').addEventListener('click', function() {
+            alert('забыл убрать на продакшне сори');
+        });
+    </script>
+    <div class="headertext">
+        <div class="nameofmainwindow">Home</div>
+        <div class="instruments" onclick="toggle()">More</div>
+        <script>
+            function toggle(){
+                const c = document.getElementById('bata');
+                c.style.display = c.style.display === 'block' ? 'none' : 'block';
+            }
+        </script>
+    </div>
+    <div id="bata" class="powerbox">
+        <div class="powerbtn1">
+            <div class=powerimg1>
+                <img class="powerimage1" src="/conky.png">
+            </div>
+            <div class=powertext1>About me</div>
+        </div>
+        <div class="powerbtn2">
+            <div class="powerimg2">
+                <img class="powerimage2" src="/epiphany.png">
+            </div>
+            <div class="powertext2">Software repo</div>
+        </div>
+    </div>
+</header>
+<div class="mainwindow">
+    <div class="inwindowpanel">
+        <div class="buttons">
+            <div class="button1"></div>
+            <div class="button2"></div>
+            <div class="button3"></div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="maintext">
+        <div class="title">crystal's Home</div>
+        <div class="subtitle">Happy Christmas by the way :)</div>
+    </div>
+    <div class="options">
+        <a class="option1href" href="/history">
+            <div class="option1">
+                <div class="image1">
+                    <img class="img1" src="https://dl.malwarewatch.org/theme/images/back.png">
+                </div>
+                <div class="textbox1">
+                    <div class="text1">historify</div>
+                    <div class="subtext1">Study history as if it were documentation</div>
+            </div>
+        </div>
+        </a>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=z73-Y_VGHm5J60UO" class="option1href">
+        <div class="option2">
+            <div class="image2">
+                <img class="img2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png">
+            </div>
+            <div class="textbox2">
+                <div class="text2">telegram</div>
+                <div class="subtext2">My telegram</div>
+            </div>
+        </div>
+        </a>
+        <div class="option3">
+            <div class="text3"></div>
+            <div class="image3"></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
