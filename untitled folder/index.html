@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven — Книгарня</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo"><span>📚</span> BookHaven</div>
+        <div class="cart-info" onclick="toggleCart()" style="cursor: pointer;">
+            <i class="fas fa-shopping-cart"></i> Кошик (<span id="cart-count">0</span>)
+        </div>
+    </div>
+</header>
+
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="toggleCart()">&times;</span>
+        <h2>Ваш кошик</h2>
+        <div id="cart-items">Кошик порожній</div>
+        <hr>
+        <p><strong>Разом: <span id="total-price">0</span> грн</strong></p>
+        <button class="buy-btn">Оформити замовлення</button>
+    </div>
+</div>
+
+<div class="tabs">
+    <button class="tab-btn active" id="btn-books" onclick="showCategory('books')">Книги</button>
+    <button class="tab-btn" id="btn-manga" onclick="showCategory('manga')">Манґа</button>
+</div>
+
+<main>
+    <h2 id="category-title">Книги</h2>
+    <section id="books" class="product-grid">
+        <div class="card">
+            <img src="https://fantasy-worlds.net/img/full/1/109.jpg" alt="Відьмак">
+            <div class="card-content">
+                <h3>Відьмак</h3>
+                <p class="price">350 грн</p>
+                <button class="buy-btn" onclick="addToCart('Відьмак', 350)">Купити</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://loveread.ec/img/book_covers/008/8582.jpg" alt="Дюна">
+            <div class="card-content">
+                <h3>Дюна</h3>
+                <p class="price">420 грн</p>
+                <button class="buy-btn" onclick="addToCart('Дюна', 420)">Купити</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="manga" class="product-grid" style="display:none;">
+        <div class="card">
+            <img src="https://www.pulsar.ua/files/webp/img_products/full_Naruto-70.webp" alt="Наруто">
+            <div class="card-content">
+                <h3>Naruto: Vol 1</h3>
+                <p class="price">250 грн</p>
+                <button class="buy-btn" onclick="addToCart('Naruto', 250)">Купити</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
