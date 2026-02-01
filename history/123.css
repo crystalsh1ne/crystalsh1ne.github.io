@@ -1,0 +1,78 @@
+/* Vanilla theme for Vector 2010 */
+
+body { 
+	background-color: rgb(0, 0, 0); /* vanilla */
+	background-image: linear-gradient(100deg, rgb(65, 0, 0), rgb(128, 0, 0) );
+	background-repeat: no-repeat;
+    color: white;
+}
+#firstHeading { font-family: 'courier', 'ubuntu', 'noto sans', 'segoe ui', verdana, tahoma, 'trebuchet ms', arial, helvetica, sans-serif } 
+.mw-body { 
+	border:1px solid rgb(168, 0, 0);
+    background-color: #000000;
+	border-right-width:0;
+}
+#mw-page-base { background:#000000; }
+
+.vector-menu-tabs,
+.vector-menu-tabs a { background:#000000 ; }
+.left-navigation { margin-bottom: 10px; }
+.vector-menu-tabs li { border-radius: 100px; }
+.vector-menu-tabs li  { padding: 1px; margin: 1px; }
+
+#content { 
+	border-radius: 30px 0 0 30px;
+	box-shadow: -5px 5px 10px -7px #000000;
+}
+
+.vector-menu-tabs li { 
+	background-image:none;
+	background-color:rgb(0, 0, 0); /* fallback */
+	background-color:rgba(255,255,255,0.5) }
+.vector-menu-tabs li a { padding-top: 0; height:20px; }
+.vector-menu-tabs { padding-left: 30px; }
+
+/* group 1 */
+a:link, .vector-menu-portal .vector-menu-content li a,
+.skin--responsive #p-personal li a {
+  color: rgb(204, 58, 199);
+}
+
+/* group 2 */
+.vector-menu-portal .vector-menu-content li a,
+.skin--responsive #p-personal li a,
+#p-personal a,
+#footer a {
+	color: brown;
+}
+
+/* selection */
+::selection {  background-color: rgb(255, 210, 150); } /* vanilla */
+::-moz-selection {  background-color: rgb(239, 54, 199); } /* Firefox 61 and earlier */
+
+/* edit summaries */
+.autocomment a { color: grey; }
+
+/* legacy MediaWiki */
+.vectorTabs { margin-left: 30px; }
+.vectorTabs,
+.vectorTabs a { background:none ; }
+.left-navigation { margin-bottom: 10px; }
+.vectorTabs li { border-radius: 100px; }
+.vectorTabs li  { padding: 1px; margin: 1px; }
+
+.vectorTabs li { 
+	background-image:none;
+	background-color:rgb(0, 0, 0); /* fallback */
+	background-color:rgba(255,255,255,0.5);
+}
+.vectorTabs li a { padding-top:0; height:20px; }
+.vectorTabs { padding-left: 30px; }
+.mw-panel a,
+#mw-panel .portal .body li a{ color: brown; }
+div.vectorTabs ul,
+div.vectorTabs ul li { background-image: none; height:20px;}
+div.vectorTabs span a { padding-top: 0; }
+div.vectorTabs,
+div.vectorTabs span{ background-image: none; }
+div.vectorTabs ul li { margin-left: 5px; }
